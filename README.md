@@ -10,7 +10,7 @@ Le projet est un projet de jeu communautaire ou nous votons sur le serveur pour 
 
 **Language :** GD Script
 
-**Genre :** Aventure, RPG
+**Genre :** Aventure, RPG Japonais
 
 *Ces informations sont amenées à changer régulièrement.*
 
