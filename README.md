@@ -5,8 +5,11 @@ Le projet est un projet de jeu communautaire ou nous votons sur le serveur pour 
 
 ## Informations
 **Univers :** Steampunk
+
 **Camera :** 2D, Vue 3/4
+
 **Language :** GD Script
+
 **Genre :** Aventure, RPG
 
 *Ces informations sont amenées à changer régulièrement.*
