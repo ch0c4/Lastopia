@@ -19,7 +19,7 @@ func _ready() -> void:
 	target_position = position
 
 
-func _process(delta):
+func _process(delta) -> void:
 	# Verification de collision
 	if ray.is_colliding():
 		position = last_position
@@ -51,10 +51,23 @@ func get_move_direction() -> void:
 	move_direction.x = right - left
 	move_direction.y = down - up
 
-	# Limitation a 4 directions
-	if move_direction.x != 0 && move_direction.y != 0:
+	# Verification de la posibilite de se deplacer
+	if ! move_possible():
 		move_direction = Vector2.ZERO
 
 	# Orientation du raycast
 	if move_direction != Vector2.ZERO:
 		ray.cast_to = move_direction * Config.TILE_SIZE / 2
+
+
+# Interdiction de deplacement optionels
+func move_possible() -> bool:
+	# Liste de conditions, doivent toutes etre false pour se deplacer
+	var conditions: Array = [
+		Globals.is_dialogue,  # Si un dialogue est ouvert
+		move_direction.x != 0 && move_direction.y != 0,  # Limitation a 4 directions
+	]
+	for condition in conditions:
+		if condition:
+			return false
+	return true
