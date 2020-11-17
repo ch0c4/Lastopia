@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Resources/Dialog.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+DialogContent = PoolStringArray( "1 dsqqds", "2 qdsqsdsqs", "3 qdsqsddsq", "4 qsqdsq sd", "5 qsddqsdqs ", "6 q s qsdds q" )
