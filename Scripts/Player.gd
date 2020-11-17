@@ -20,6 +20,9 @@ func _ready() -> void:
 
 
 func _process(delta) -> void:
+	# verification d'une possible interaction
+	check_interaction()
+
 	# Verification de collision
 	if ray.is_colliding():
 		position = last_position
@@ -71,3 +74,17 @@ func move_possible() -> bool:
 		if condition:
 			return false
 	return true
+
+
+# Verification et interaction avec posible GameObject
+func check_interaction() -> void:
+	if ! ray.is_colliding() || ! move_possible():
+		return
+	var space_state = get_world_2d().direct_space_state
+	var element = space_state.intersect_ray(
+		global_position, move_direction * Config.TILE_SIZE / 2, [self]
+	)
+	if element != null:
+		if element.collider is GameObject:
+			if Input.is_action_just_pressed("ui_interact"):
+				element.collider.interact()

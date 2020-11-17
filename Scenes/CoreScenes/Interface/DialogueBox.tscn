@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Ressources/Fonts/Dynamicfont_normal.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Ressources/Sprites/dialogue/arrow.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Fonts/Dynamicfont_normal.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/Sprites/dialogue/arrow.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Interface/DialogueBox.gd" type="Script" id=3]
 
 [sub_resource type="Animation" id=1]
@@ -29,6 +29,7 @@ tracks/1/keys = {
 }
 
 [node name="DialogueBox" type="Control"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 8.0
@@ -37,6 +38,7 @@ margin_right = -8.0
 margin_bottom = -8.0
 script = ExtResource( 3 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -57,8 +59,8 @@ margin_top = 4.0
 margin_right = -4.0
 margin_bottom = -4.0
 custom_fonts/normal_font = ExtResource( 1 )
-bbcode_text = "Ceci est un text qui je l'espere est assez long pour donner un effet super mega cool de la mort qui tue !"
-text = "Ceci est un text qui je l'espere est assez long pour donner un effet super mega cool de la mort qui tue !"
+bbcode_text = "Sample dialog"
+text = "Sample dialog"
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
@@ -70,8 +72,11 @@ playback/speed = 1.5
 
 [node name="Arrow" type="Sprite" parent="."]
 visible = false
-position = Vector2( 216, 38.0053 )
+position = Vector2( 216, 38.1471 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow"]
 autoplay = "idle"

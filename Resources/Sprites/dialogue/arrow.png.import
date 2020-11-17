@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/test_tile.png-2ecbdfc0190b56f8e802e0c2703e245b.stex"
+path="res://.import/arrow.png-4c691cd5514139c86e34143830146ea5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ressources/Sprites/test_tile.png"
-dest_files=[ "res://.import/test_tile.png-2ecbdfc0190b56f8e802e0c2703e245b.stex" ]
+source_file="res://Resources/Sprites/dialogue/arrow.png"
+dest_files=[ "res://.import/arrow.png-4c691cd5514139c86e34143830146ea5.stex" ]
 
 [params]
 
