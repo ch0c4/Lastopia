@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/WorldScenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Ressources/Sprites/test_tile.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/CoreScenes/UserInterface.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -60,3 +61,5 @@ tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 
 
 [node name="Player" parent="GameObjects" instance=ExtResource( 2 )]
 position = Vector2( 103.79, 70.8265 )
+
+[node name="UserInterface" parent="." instance=ExtResource( 4 )]
