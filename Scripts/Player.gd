@@ -1,10 +1,15 @@
 extends KinematicBody2D
 
+# Stats
 var speed: int = 64
 
+# Positions
 var last_position: Vector2
 var target_position: Vector2
 var move_direction: Vector2
+
+# Collisions
+onready var ray = get_node("RayCast2D")
 
 
 func _ready() -> void:
@@ -15,8 +20,13 @@ func _ready() -> void:
 
 
 func _process(delta):
-	# Deplacement
-	position += speed * move_direction * delta
+	# Verification de collision
+	if ray.is_colliding():
+		position = last_position
+		target_position = last_position
+	else:
+		# Deplacement
+		position += speed * move_direction * delta
 
 	# Arret du deplacement
 	if position.distance_to(last_position) >= Config.TILE_SIZE - speed * delta:
@@ -44,3 +54,7 @@ func get_move_direction() -> void:
 	# Limitation a 4 directions
 	if move_direction.x != 0 && move_direction.y != 0:
 		move_direction = Vector2.ZERO
+
+	# Orientation du raycast
+	if move_direction != Vector2.ZERO:
+		ray.cast_to = move_direction * Config.TILE_SIZE / 2
