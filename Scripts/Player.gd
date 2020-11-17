@@ -1,61 +1,46 @@
 extends KinematicBody2D
 
-var direction = Vector2()
+var speed: int = 64
 
-const MAX_SPEED = 400
-
-var speed = 0
-var velocity = Vector2()
-
-var world_target_pos = Vector2()
-var target_direction = Vector2()
-var is_moving = false
-
-var type
-var grid
+var last_position: Vector2
+var target_position: Vector2
+var move_direction: Vector2
 
 
-func _ready():
-	Globals.Player = self
-	grid = get_parent()
-	type = grid.PLAYER
-	set_process(true)
+func _ready() -> void:
+	# Positions de base
+	position = position.snapped(Config.TILE_SIZE_V)
+	last_position = position
+	target_position = position
 
 
 func _process(delta):
-	direction = Vector2()
-	speed = 0
+	# Deplacement
+	position += speed * move_direction * delta
 
-	if Input.is_action_pressed("move_up"):
-		direction.y = -1
-	elif Input.is_action_pressed("move_down"):
-		direction.y = 1
+	# Arret du deplacement
+	if position.distance_to(last_position) >= Config.TILE_SIZE - speed * delta:
+		position = target_position
 
-	if Input.is_action_pressed("move_left"):
-		direction.x = -1
-	elif Input.is_action_pressed("move_right"):
-		direction.x = 1
+	# Debut du deplacement
+	if position == target_position:
+		get_move_direction()
+		last_position = position
+		target_position += move_direction * Config.TILE_SIZE
 
-	if not is_moving and direction != Vector2():
-		# si le joueur ne se deplace pas et n'a pas de direction
-		# puis fixer la direction cible
-		target_direction = direction.normalized()
 
-		if grid.is_cell_vacant(position, direction):
-			world_target_pos = grid.update_child_pos(position, direction, type)
-			is_moving = true
+# Set the moving direction from the player inputs
+func get_move_direction() -> void:
+	# Detection des touches
+	var left: int = Input.is_action_pressed("ui_left")
+	var right: int = Input.is_action_pressed("ui_right")
+	var up: int = Input.is_action_pressed("ui_up")
+	var down: int = Input.is_action_pressed("ui_down")
 
-	elif is_moving:
-		speed = MAX_SPEED
-		velocity = speed * target_direction * delta
+	# Calcule de la direction
+	move_direction.x = right - left
+	move_direction.y = down - up
 
-		var distance_to_target = position.distance_to(world_target_pos)
-		var move_distance = velocity.length()
-
-		# Definir la distance du dernier mouvement par rapport a la distance de la cible
-		# cela fera en sorte que le joueur s'arrete exactement sur la cible
-		if distance_to_target < move_distance:
-			velocity = target_direction * distance_to_target
-			is_moving = false
-
-		var _v = move_and_collide(velocity)
+	# Limitation a 4 directions
+	if move_direction.x != 0 && move_direction.y != 0:
+		move_direction = Vector2.ZERO
