@@ -4,6 +4,8 @@ Ce projet est un projet français sur lequel tout le monde est libre de particip
 
 Le projet est un projet de jeu communautaire ou nous votons sur le serveur pour tout ce qui est important. Donc oui, il est possible que ce projet avance lentement, mais il est préférable à un projet partant dans tout les sens.
 
+Sur discord vous aurez les mises à jours
+
 ## Informations
 
 **Univers :** Steampunk
