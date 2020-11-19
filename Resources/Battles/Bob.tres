@@ -12,5 +12,5 @@
 [resource]
 script = ExtResource( 1 )
 AutorisedCharacters = [ ExtResource( 8 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ) ]
-Enemies = [ ExtResource( 4 ) ]
+Enemies = [ ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ) ]
 Loots = [  ]

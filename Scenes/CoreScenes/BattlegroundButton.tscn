@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Resources/Battles/BattleMenuText.tres" type="DynamicFont" id=1]
+
+[node name="Button" type="Button"]
+margin_right = 96.0
+margin_bottom = 19.0
+focus_mode = 0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.780392, 0.862745, 0.815686, 1 )
+custom_colors/font_color_hover = Color( 0.607843, 0.670588, 0.698039, 1 )
+custom_constants/hseparation = 0
+enabled_focus_mode = 0
+text = "Enemy"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

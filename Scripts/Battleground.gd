@@ -51,6 +51,7 @@ func _ready() -> void:
 		member.MP = randi() % member.StatMP
 
 	Menu.setAllies()
+	Menu.setEnemies(Enemies)
 
 
 # Definition et configuration des allies
@@ -85,13 +86,15 @@ func DefineSprite(elements: Array, places: Array, limit: int):
 func SetTurnOrder() -> void:
 	turnOrder = []
 	for e in Team:
-		turnOrder.append(e)
+		if e is Character:
+			turnOrder.append(e)
 	for e in Enemies:
-		turnOrder.append(e)
+		if e is Enemy:
+			turnOrder.append(e)
 
 	turnOrder.sort_custom(self, "initOrder")
 
 
 # Ordonne les elements par initiattive
-func initOrder(a, b):
+func initOrder(a, b) -> bool:
 	return b.StatInit < a.StatInit
