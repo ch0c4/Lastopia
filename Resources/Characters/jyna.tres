@@ -16,3 +16,4 @@ StatHP = 100
 StatMP = 100
 StatInit = 5
 Weapon = ExtResource( 2 )
+Actions = [ 0, 1, 3 ]

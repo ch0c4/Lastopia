@@ -14,3 +14,4 @@ StatDex = 50
 StatHP = 100
 StatMP = 100
 StatInit = 98
+Actions = [ 0, 1, 2, 3 ]

@@ -2,6 +2,9 @@ extends Resource
 class_name Character
 
 enum CLASSES { WARRIOR, RANGER, ENGINER }
+enum ACTIONS_LIST { ATTAQUER, TECHNIQUE, OBJET, FUITE }
+
+var actions_list: Array = ["Attaquer", "Technique", "Objet", "Fuite"]
 
 export (String) var Name
 export (CLASSES) var Classe
@@ -29,6 +32,11 @@ export (Resource) var ArmorPants
 export (Resource) var ArmorGloves
 export (Resource) var ArmorAccesories1
 export (Resource) var ArmorAccesories2
+
+# Competences
+export (Array, ACTIONS_LIST) var Actions = [
+	ACTIONS_LIST.ATTAQUER, ACTIONS_LIST.TECHNIQUE, ACTIONS_LIST.OBJET, ACTIONS_LIST.FUITE
+]
 
 # Stats dans l'equipe
 var HP: int = StatHP

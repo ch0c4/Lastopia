@@ -28,12 +28,24 @@ func setAllies() -> void:
 			UpdateMP(charPanel, charTeam.MP)
 
 
+# Defini les enemies dans le menu
 func setEnemies(enemies: Array) -> void:
 	delChilds(enemiesList)
 	var count := 1
 	for e in enemies:
 		createBtn(enemiesList, e.Name + " " + str(count), e.Name + "_" + str(count))
 		count += 1
+
+
+# Defini les actions du personnage en cours
+func setActions(character: Character) -> void:
+	print(character.Name)
+	delChilds(actionsList)
+	for action in character.Actions:
+		print(character.actions_list[action])
+		createBtn(
+			actionsList, str(character.actions_list[action]), str(character.actions_list[action])
+		)
 
 
 # Met a jour les points de vie

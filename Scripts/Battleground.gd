@@ -26,12 +26,15 @@ onready var enemies_placement: Array = [enemy5, enemy4, enemy6, enemy2, enemy1, 
 
 var battle: Battle  # Informations sur le combat en cours
 var turnOrder: Array  # Ordre de jeu
-var currentTurn: int
+var currentTurn: int = -1
+var currentRound: int = 1
 
 
-# Debut et lancement du mode combat
+# Debut, reset et lancement du mode combat
 func start(new_battle: Battle) -> void:
 	battle = new_battle
+	currentTurn = -1
+	currentRound = 1
 	Globals.GameMode = Globals.GAMEMODE.BATTLE
 	Team = []
 	for member in Globals.Team:
@@ -53,15 +56,36 @@ func _ready() -> void:
 
 	Menu.setAllies()
 	Menu.setEnemies(Enemies)
+	nextTurn()
+
+
+func _process(_delta) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		nextTurn()
 
 
 # Change turn
 func nextTurn() -> void:
-	if currentTurn >= turnOrder.size():
+	if currentTurn >= turnOrder.size() - 1:
 		currentTurn = 0
+		currentRound += 1
 	else:
 		currentTurn += 1
-	print("---< Turn: " + str(currentTurn) + " >---")
+	# TODO: Retirer ca
+	print(
+		(
+			"---< Turn: "
+			+ str(currentTurn)
+			+ " ("
+			+ str(turnOrder[currentTurn].Name)
+			+ ")"
+			+ " >--- ["
+			+ str(currentRound)
+			+ "]"
+		)
+	)
+	if turnOrder[currentTurn] is Character:
+		Menu.setActions(turnOrder[currentTurn])
 
 
 # Definition et configuration des allies
