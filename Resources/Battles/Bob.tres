@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Resources/Battle.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Characters/bran.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Characters/nyla.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Enemies/bob.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Characters/damoras.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Characters/jyna.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Characters/kyros.tres" type="Resource" id=7]
+[ext_resource path="res://Resources/Characters/seth.tres" type="Resource" id=8]
+
+[resource]
+script = ExtResource( 1 )
+AutorisedCharacters = [ ExtResource( 8 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ) ]
+Enemies = [ ExtResource( 4 ) ]
+Loots = [  ]

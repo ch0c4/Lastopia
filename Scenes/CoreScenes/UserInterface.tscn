@@ -5,3 +5,4 @@
 [node name="UserInterface" type="CanvasLayer"]
 
 [node name="DialogueBox" parent="." instance=ExtResource( 1 )]
+visible = false

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Resources/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Sprites/bob.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Bob"
+BattleSprite = ExtResource( 2 )
+StatFor = 50
+StatInt = 50
+StatDex = 50
+StatHP = 100
+StatMP = 100
+StatInit = 5

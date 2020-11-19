@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Resources/Stuff.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Epée toute pourie"
+Type = 0
+WeaponType = 2
+ArmurePart = 0
+Classes = 1
+StatFor = 80
+StatInt = 20
+StatDex = 40

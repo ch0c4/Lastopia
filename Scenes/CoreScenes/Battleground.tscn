@@ -1,0 +1,87 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/CoreScenes/Interface/BattleMenu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Battleground.gd" type="Script" id=2]
+
+[node name="Battleground" type="Node2D"]
+z_index = 600
+z_as_relative = false
+script = ExtResource( 2 )
+Team = [ null, null, null ]
+Enemies = [ null, null, null, null, null, null ]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -6.0
+margin_top = -6.0
+margin_right = 486.0
+margin_bottom = 324.0
+color = Color( 0.329412, 0.329412, 0.329412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BattleMenu" parent="." instance=ExtResource( 1 )]
+
+[node name="Enemies" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite6" type="Sprite" parent="Enemies"]
+position = Vector2( 84, 174 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5" type="Sprite" parent="Enemies"]
+position = Vector2( 84, 126 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4" type="Sprite" parent="Enemies"]
+position = Vector2( 84, 78 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite3" type="Sprite" parent="Enemies"]
+position = Vector2( 36, 174 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="Enemies"]
+position = Vector2( 36, 126 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite1" type="Sprite" parent="Enemies"]
+position = Vector2( 36, 78 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Allies" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite1" type="Sprite" parent="Allies"]
+position = Vector2( 396, 174 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="Allies"]
+position = Vector2( 396, 126 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite3" type="Sprite" parent="Allies"]
+position = Vector2( 396, 78 )
+__meta__ = {
+"_edit_lock_": true
+}

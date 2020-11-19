@@ -1,0 +1,389 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Resources/Fonts/Perfect DOS VGA 437.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = SubResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.835294, 0.160784, 0.160784, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0901961, 0.0901961, 0.0901961, 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 7
+font_data = SubResource( 1 )
+
+[node name="BattleMenu" type="CanvasLayer"]
+
+[node name="Container" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -74.0
+color = Color( 0.0705882, 0.0705882, 0.0705882, 0.854902 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Enemies" type="ColorRect" parent="Container"]
+margin_right = 96.0
+margin_bottom = 72.0
+color = Color( 0.160784, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Container/Enemies"]
+margin_right = 96.0
+margin_bottom = 72.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/Enemies/ScrollContainer"]
+margin_right = 67.0
+margin_bottom = 92.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button1" type="Button" parent="Container/Enemies/ScrollContainer/VBoxContainer"]
+margin_right = 67.0
+margin_bottom = 20.0
+text = "Enemy 1"
+
+[node name="Button2" type="Button" parent="Container/Enemies/ScrollContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 67.0
+margin_bottom = 44.0
+text = "Enemy 2"
+
+[node name="Button3" type="Button" parent="Container/Enemies/ScrollContainer/VBoxContainer"]
+margin_top = 48.0
+margin_right = 67.0
+margin_bottom = 68.0
+text = "Enemy 3"
+
+[node name="Button4" type="Button" parent="Container/Enemies/ScrollContainer/VBoxContainer"]
+margin_top = 72.0
+margin_right = 67.0
+margin_bottom = 92.0
+text = "Enemy 4"
+
+[node name="Main" type="ColorRect" parent="Container"]
+margin_left = 96.0
+margin_right = 336.0
+margin_bottom = 72.0
+color = Color( 0.415686, 0.415686, 0.415686, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="ColorRect" parent="Container/Main"]
+margin_right = 96.0
+margin_bottom = 72.0
+color = Color( 0.0705882, 0.0705882, 0.0705882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="Container/Main/Menu"]
+margin_right = 96.0
+margin_bottom = 72.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/Main/Menu/ScrollContainer2"]
+margin_right = 65.0
+margin_bottom = 92.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button1" type="Button" parent="Container/Main/Menu/ScrollContainer2/VBoxContainer"]
+margin_right = 65.0
+margin_bottom = 20.0
+text = "Action 1"
+
+[node name="Button2" type="Button" parent="Container/Main/Menu/ScrollContainer2/VBoxContainer"]
+margin_top = 24.0
+margin_right = 65.0
+margin_bottom = 44.0
+text = "Action 2"
+
+[node name="Button3" type="Button" parent="Container/Main/Menu/ScrollContainer2/VBoxContainer"]
+margin_top = 48.0
+margin_right = 65.0
+margin_bottom = 68.0
+text = "Action 3"
+
+[node name="Button4" type="Button" parent="Container/Main/Menu/ScrollContainer2/VBoxContainer"]
+margin_top = 72.0
+margin_right = 65.0
+margin_bottom = 92.0
+text = "Action 4"
+
+[node name="Selection" type="ColorRect" parent="Container/Main"]
+margin_left = 96.0
+margin_right = 240.0
+margin_bottom = 72.0
+color = Color( 0.109804, 0.235294, 0.184314, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Container/Main/Selection"]
+margin_right = 144.0
+margin_bottom = 72.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="Container/Main/Selection/ScrollContainer"]
+margin_right = 134.0
+margin_bottom = 116.0
+columns = 2
+
+[node name="Button" type="Button" parent="Container/Main/Selection/ScrollContainer/GridContainer"]
+margin_right = 65.0
+margin_bottom = 20.0
+text = "Action 1"
+
+[node name="Button2" type="Button" parent="Container/Main/Selection/ScrollContainer/GridContainer"]
+margin_left = 69.0
+margin_right = 134.0
+margin_bottom = 20.0
+text = "Action 1"
+
+[node name="Button3" type="Button" parent="Container/Main/Selection/ScrollContainer/GridContainer"]
+margin_top = 24.0
+margin_right = 65.0
+margin_bottom = 44.0
+text = "Action 1"
+
+[node name="Button4" type="Button" parent="Container/Main/Selection/ScrollContainer/GridContainer"]
+margin_left = 69.0
+margin_top = 24.0
+margin_right = 134.0
+margin_bottom = 44.0
+text = "Action 1"
+
+[node name="Button5" type="Button" parent="Container/Main/Selection/ScrollContainer/GridContainer"]
+margin_top = 48.0
+margin_right = 65.0
+margin_bottom = 68.0
+text = "Action 1"
+
+[node name="Button6" type="Button" parent="Container/Main/Selection/ScrollContainer/GridContainer"]
+margin_left = 69.0
+margin_top = 48.0
+margin_right = 134.0
+margin_bottom = 68.0
+text = "Action 1"
+
+[node name="Button7" type="Button" parent="Container/Main/Selection/ScrollContainer/GridContainer"]
+margin_top = 72.0
+margin_right = 65.0
+margin_bottom = 92.0
+text = "Action 1"
+
+[node name="Button8" type="Button" parent="Container/Main/Selection/ScrollContainer/GridContainer"]
+margin_left = 69.0
+margin_top = 72.0
+margin_right = 134.0
+margin_bottom = 92.0
+text = "Action 1"
+
+[node name="Button9" type="Button" parent="Container/Main/Selection/ScrollContainer/GridContainer"]
+margin_top = 96.0
+margin_right = 65.0
+margin_bottom = 116.0
+text = "Action 1"
+
+[node name="Button10" type="Button" parent="Container/Main/Selection/ScrollContainer/GridContainer"]
+margin_left = 69.0
+margin_top = 96.0
+margin_right = 134.0
+margin_bottom = 116.0
+text = "Action 1"
+
+[node name="Group" type="ColorRect" parent="Container"]
+margin_left = 336.0
+margin_right = 480.0
+margin_bottom = 72.0
+color = Color( 0.2, 0.113725, 0.25098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Container/Group"]
+margin_right = 144.0
+margin_bottom = 24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Container/Group/Panel"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 42.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 2 )
+text = "Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="Container/Group/Panel"]
+margin_left = 40.0
+margin_top = 2.0
+margin_right = 136.0
+margin_bottom = 8.0
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+value = 40.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Container/Group/Panel"]
+margin_left = 42.0
+margin_top = 6.0
+margin_right = 132.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 5 )
+text = "HP: 40 / 100"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Container/Group/Panel"]
+margin_left = 42.0
+margin_top = 12.0
+margin_right = 132.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 5 )
+text = "MP: 100 / 100"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="Container/Group"]
+margin_top = 24.0
+margin_right = 144.0
+margin_bottom = 48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Container/Group/Panel2"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 42.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 2 )
+text = "Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="Container/Group/Panel2"]
+margin_left = 40.0
+margin_top = 2.0
+margin_right = 136.0
+margin_bottom = 8.0
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+value = 40.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Container/Group/Panel2"]
+margin_left = 42.0
+margin_top = 6.0
+margin_right = 132.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 5 )
+text = "HP: 40 / 100"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Container/Group/Panel2"]
+margin_left = 42.0
+margin_top = 12.0
+margin_right = 132.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 5 )
+text = "MP: 100 / 100"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel3" type="Panel" parent="Container/Group"]
+margin_top = 48.0
+margin_right = 144.0
+margin_bottom = 72.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Container/Group/Panel3"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 42.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 2 )
+text = "Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="Container/Group/Panel3"]
+margin_left = 40.0
+margin_top = 2.0
+margin_right = 136.0
+margin_bottom = 8.0
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+value = 40.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Container/Group/Panel3"]
+margin_left = 42.0
+margin_top = 6.0
+margin_right = 132.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 5 )
+text = "HP: 40 / 100"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Container/Group/Panel3"]
+margin_left = 42.0
+margin_top = 12.0
+margin_right = 132.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 5 )
+text = "MP: 100 / 100"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}

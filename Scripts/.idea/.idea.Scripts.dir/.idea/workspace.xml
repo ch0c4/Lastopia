@@ -20,7 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80e4f863-b66d-468d-b361-17113b01d0c6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Resources/Dialogues/placeholder.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../Resources/Dialogues/placeholder.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Resources/Fonts/Dynamicfont_normal.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../Resources/Fonts/Dynamicfont_normal.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Resources/Sprites/book.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Resources/Sprites/book.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Resources/Sprites/player.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Resources/Sprites/player.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Resources/Sprites/test_tile.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Resources/Sprites/test_tile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/CoreScenes/Interface/DialogueBox.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/CoreScenes/Interface/DialogueBox.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Scenes/Game.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/Game.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/WorldScenes/Player.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/WorldScenes/Player.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/GameObject.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/GameObject.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Config.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Globals.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Globals.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/../project.godot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +82,9 @@
       <workItem from="1605557212881" duration="6000" />
       <workItem from="1605601199303" duration="1240000" />
       <workItem from="1605607728756" duration="806000" />
+      <workItem from="1605686740874" duration="7000" />
+      <workItem from="1605694005256" duration="93000" />
+      <workItem from="1605706449644" duration="30000" />
     </task>
     <servers />
   </component>

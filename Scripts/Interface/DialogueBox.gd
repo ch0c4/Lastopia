@@ -14,9 +14,9 @@ func _ready():
 
 
 # Debut d'un dialogue
-func start(new_dialog: PoolStringArray) -> void:
+func start(new_dialog: Dialogue) -> void:
 	dialog_index = 0
-	dialog = new_dialog
+	dialog = new_dialog.DialogContent
 	Globals.is_dialogue = true
 	load_dialog()
 	visible = true

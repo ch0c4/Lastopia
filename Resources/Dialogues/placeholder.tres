@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource( 1 )
-DialogContent = PoolStringArray( "1 dsqqds", "2 qdsqsdsqs", "3 qdsqsddsq", "4 qsqdsq sd", "5 qsddqsdqs ", "6 q s qsdds q" )
+DialogContent = PoolStringArray( "Je suis une patate", "Mais j\'en suis fiere", "Nik les rageux", "4 qsqdsq sd", "5 qsddqsdqs ", "6 q s qsdds q" )

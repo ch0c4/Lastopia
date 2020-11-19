@@ -14,7 +14,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 216, -0.25, 0, 0.25, 0, 216, -0.25, 0, 0.25, 0, 216, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 448, -0.25, 0, 0.25, 0, 448, -0.25, 0, 0.25, 0, 448, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 0.5, 1 )
 }
 tracks/1/type = "bezier"
@@ -24,16 +24,15 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 40, -0.25, 0, 0.25, 0, 38, -0.25, 0, 0.25, 0, 40, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 72, -0.25, 0, 0.25, 0, 76, -0.25, 0, 0.25, 0, 72, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 0.5, 1 )
 }
 
 [node name="DialogueBox" type="Control"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 8.0
-margin_top = 104.0
+margin_top = 224.0
 margin_right = -8.0
 margin_bottom = -8.0
 script = ExtResource( 3 )
@@ -71,12 +70,8 @@ playback_speed = 1.5
 playback/speed = 1.5
 
 [node name="Arrow" type="Sprite" parent="."]
-visible = false
-position = Vector2( 216, 38.1471 )
+position = Vector2( 448, 76 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow"]
 autoplay = "idle"

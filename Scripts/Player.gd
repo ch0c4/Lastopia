@@ -21,6 +21,9 @@ func _ready() -> void:
 
 
 func _process(delta) -> void:
+	# Ne rien faire si pas en mode normal
+	if Globals.GameMode != Globals.GAMEMODE.NORMAL:
+		return
 	# Sauvegarde de la derniere position non null
 	if move_direction != Vector2.ZERO:
 		last_move_direction = move_direction
