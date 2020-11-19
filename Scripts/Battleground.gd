@@ -26,6 +26,7 @@ onready var enemies_placement: Array = [enemy5, enemy4, enemy6, enemy2, enemy1, 
 
 var battle: Battle  # Informations sur le combat en cours
 var turnOrder: Array  # Ordre de jeu
+var currentTurn: int
 
 
 # Debut et lancement du mode combat
@@ -52,6 +53,15 @@ func _ready() -> void:
 
 	Menu.setAllies()
 	Menu.setEnemies(Enemies)
+
+
+# Change turn
+func nextTurn() -> void:
+	if currentTurn >= turnOrder.size():
+		currentTurn = 0
+	else:
+		currentTurn += 1
+	print("---< Turn: " + str(currentTurn) + " >---")
 
 
 # Definition et configuration des allies
