@@ -7,6 +7,7 @@ var speed: int = 64
 var last_position: Vector2
 var target_position: Vector2
 var move_direction: Vector2
+var last_move_direction: Vector2
 
 # Collisions
 onready var ray = get_node("RayCast2D")
@@ -20,6 +21,10 @@ func _ready() -> void:
 
 
 func _process(delta) -> void:
+	# Sauvegarde de la derniere position non null
+	if move_direction != Vector2.ZERO:
+		last_move_direction = move_direction
+
 	# verification d'une possible interaction
 	check_interaction()
 
@@ -82,8 +87,11 @@ func check_interaction() -> void:
 		return
 	var space_state = get_world_2d().direct_space_state
 	var element = space_state.intersect_ray(
-		global_position, move_direction * Config.TILE_SIZE / 2, [self]
+		global_position + (Config.TILE_SIZE_V / 2),
+		global_position + (last_move_direction * Config.TILE_SIZE_V) + (Config.TILE_SIZE_V / 2),
+		[self]
 	)
+
 	if element != null:
 		if element.collider is GameObject:
 			if Input.is_action_just_pressed("ui_interact"):
