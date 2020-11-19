@@ -14,7 +14,7 @@ export (int, 1, 100) var StatDex = 50
 # Stats secondaires
 export (int, 1, 10000) var StatHP = 100
 export (int, 1, 10000) var StatMP = 100
-export (int, 1, 10) var StatInit = 5
+export (int, 1, 100) var StatInit = 5
 
 var HP: int = StatHP
 var MP: int = StatMP
