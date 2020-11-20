@@ -71,7 +71,7 @@ func get_move_direction() -> void:
 		ray.cast_to = move_direction * Config.TILE_SIZE / 2
 
 
-# Interdiction de deplacement optionels
+# Interdiction de deplacement optionnels
 func move_possible() -> bool:
 	# Liste de conditions, doivent toutes etre false pour se deplacer
 	var conditions: Array = [
@@ -84,7 +84,7 @@ func move_possible() -> bool:
 	return true
 
 
-# Verification et interaction avec posible GameObject
+# Verification et interaction avec possible GameObject
 func check_interaction() -> void:
 	if ! ray.is_colliding() || ! move_possible():
 		return

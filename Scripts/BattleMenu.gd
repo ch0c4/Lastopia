@@ -39,10 +39,8 @@ func setEnemies(enemies: Array) -> void:
 
 # Defini les actions du personnage en cours
 func setActions(character: Character) -> void:
-	print(character.Name)
 	delChilds(actionsList)
 	for action in character.Actions:
-		print(character.actions_list[action])
 		createBtn(
 			actionsList, str(character.actions_list[action]), str(character.actions_list[action])
 		)
@@ -59,7 +57,7 @@ func UpdateMP(node: Node, mp: int) -> void:
 	node.get_node("MP").text = "MP: " + str(mp) + " / 100"
 
 
-# Creer un boutton dans la node selectionne avec les informations donnees
+# Creer un bouton dans la node selectionne avec les informations donnees
 func createBtn(parent: Node, text: String, name: String) -> void:
 	var b = button.instance()
 	b.name = name

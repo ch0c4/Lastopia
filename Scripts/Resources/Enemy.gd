@@ -1,6 +1,8 @@
 extends Resource
 class_name Enemy
 
+var id := randi() % 10000000
+
 export (String) var Name
 
 # Graphismes

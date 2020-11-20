@@ -11,7 +11,7 @@ var Team: Array = [
 	preload("res://Resources/Characters/nyla.tres"),
 	preload("res://Resources/Characters/jyna.tres"),
 	preload("res://Resources/Characters/kyros.tres")
-]  # Membres dans l'equipe actuele
+]  # Membres dans l'equipe actuel
 
 # Raccourcis nodes
 var GameScene: Node2D  # Scene de jeu

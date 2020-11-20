@@ -17,6 +17,9 @@ onready var enemy4: Sprite = get_node("Enemies/Sprite4")
 onready var enemy5: Sprite = get_node("Enemies/Sprite5")
 onready var enemy6: Sprite = get_node("Enemies/Sprite6")
 
+# Curseur
+onready var cursor = get_node("Cursor")
+
 # Menu de combat
 onready var Menu: CanvasLayer = get_node("BattleMenu")
 
@@ -28,6 +31,7 @@ var battle: Battle  # Informations sur le combat en cours
 var turnOrder: Array  # Ordre de jeu
 var currentTurn: int = -1
 var currentRound: int = 1
+var spriteElement: Dictionary
 
 
 # Debut, reset et lancement du mode combat
@@ -40,7 +44,9 @@ func start(new_battle: Battle) -> void:
 	for member in Globals.Team:
 		if battle.AutorisedCharacters.find(member.Name):
 			Team.append(member)
-	Enemies = battle.Enemies
+	Enemies = []
+	for enemy in battle.Enemies:
+		Enemies.append(enemy.duplicate())
 	SetTurnOrder()
 
 
@@ -86,6 +92,7 @@ func nextTurn() -> void:
 	)
 	if turnOrder[currentTurn] is Character:
 		Menu.setActions(turnOrder[currentTurn])
+	updateCursor(turnOrder[currentTurn])
 
 
 # Definition et configuration des allies
@@ -114,14 +121,17 @@ func DefineSprite(elements: Array, places: Array, limit: int):
 	for i in len(elements):
 		if i < limit && elements[i] != null:
 			places[i].texture = elements[i].BattleSprite
+			spriteElement[elements[i].id] = places[i]
 
 
 # Calcule et generation du turn order
 func SetTurnOrder() -> void:
 	turnOrder = []
+	var count := 0
 	for e in Team:
-		if e is Character:
+		if e is Character && count < 3:
 			turnOrder.append(e)
+		count += 1
 	for e in Enemies:
 		if e is Enemy:
 			turnOrder.append(e)
@@ -129,6 +139,17 @@ func SetTurnOrder() -> void:
 	turnOrder.sort_custom(self, "initOrder")
 
 
-# Ordonne les elements par initiattive
+# Ordonne les elements par initiative
 func initOrder(a, b) -> bool:
 	return b.StatInit < a.StatInit
+
+
+# Met a jour la position du curseur en jeu
+func updateCursor(charTurn: Resource) -> void:
+	print(charTurn.Name)
+	if charTurn.id in spriteElement:
+		var margeY = 12
+		var element: Sprite = spriteElement[charTurn.id]
+		var pos = element.global_position + element.get_rect().position
+		pos.x += element.get_rect().size.x / 2
+		cursor.global_position = pos + Vector2(0, -margeY)

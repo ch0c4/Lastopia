@@ -1,6 +1,8 @@
 extends Resource
 class_name Character
 
+var id := randi() % 10000000
+
 enum CLASSES { WARRIOR, RANGER, ENGINER }
 enum ACTIONS_LIST { ATTAQUER, TECHNIQUE, OBJET, FUITE }
 
