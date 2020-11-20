@@ -35,7 +35,7 @@ func _process(_delta) -> void:
 func load_dialog() -> void:
 	if dialog_index < dialog.size():
 		dialog_finished = false
-		dialog_text.bbcode_text = dialog[dialog_index]
+		dialog_text.bbcode_text = tr(dialog[dialog_index])
 		dialog_text.percent_visible = 0
 		dialog_tween.interpolate_property(
 			dialog_text, "percent_visible", 0, 1, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT

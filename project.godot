@@ -129,6 +129,12 @@ ui_interact={
  ]
 }
 
+[locale]
+
+fallback="fr"
+translations=PoolStringArray( "res://Resources/Dialogues/Traductions/placeholder.en.translation", "res://Resources/Dialogues/Traductions/placeholder.fr.translation" )
+locale_filter=[ 0, [ "en", "fr" ] ]
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

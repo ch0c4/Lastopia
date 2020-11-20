@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://Resources/Dialogues/Traductions/placeholder.en.translation", "res://Resources/Dialogues/Traductions/placeholder.fr.translation" ]
+
+source_file="res://Resources/Dialogues/Traductions/placeholder.csv"
+dest_files=[ "res://Resources/Dialogues/Traductions/placeholder.en.translation", "res://Resources/Dialogues/Traductions/placeholder.fr.translation" ]
+
+[params]
+
+compress=true
+delimiter=0
