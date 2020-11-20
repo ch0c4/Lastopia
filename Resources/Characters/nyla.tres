@@ -1,7 +1,10 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Resources/Character.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Sprites/chars/nyla.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Techniques/flamethower.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Techniques/fireball.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Techniques/shock.tres" type="Resource" id=5]
 
 [resource]
 script = ExtResource( 1 )
@@ -15,3 +18,4 @@ StatHP = 100
 StatMP = 100
 StatInit = 3
 Actions = [ 1, 2, 3 ]
+Techniques = [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ) ]

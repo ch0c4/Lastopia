@@ -4,13 +4,13 @@
 
 [resource]
 script = ExtResource( 1 )
-Name = "Epée toute pourie"
-Description = ""
-Type = 0
-WeaponType = 2
+Name = "Potion de mana"
+Description = "Redonne 50MP"
+Type = 2
+WeaponType = 0
 ArmurePart = 0
-Classes = 1
-StatFor = 80
-StatInt = 20
-StatDex = 40
+Classes = 0
+StatFor = 50
+StatInt = 50
+StatDex = 50
 Amount = 1

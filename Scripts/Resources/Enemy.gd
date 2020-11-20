@@ -20,7 +20,3 @@ export (int, 1, 100) var StatInit = 5
 
 var HP: int = StatHP
 var MP: int = StatMP
-
-
-func _ready():
-	pass

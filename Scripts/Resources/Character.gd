@@ -40,6 +40,9 @@ export (Array, ACTIONS_LIST) var Actions = [
 	ACTIONS_LIST.ATTAQUER, ACTIONS_LIST.TECHNIQUE, ACTIONS_LIST.OBJET, ACTIONS_LIST.FUITE
 ]
 
+# Liste des technique du personnage
+export (Array, Resource) var Techniques
+
 # Stats dans l'equipe
 var HP: int = StatHP
 var MP: int = StatMP

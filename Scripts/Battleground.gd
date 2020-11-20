@@ -146,7 +146,6 @@ func initOrder(a, b) -> bool:
 
 # Met a jour la position du curseur en jeu
 func updateCursor(charTurn: Resource) -> void:
-	print(charTurn.Name)
 	if charTurn.id in spriteElement:
 		var margeY = 12
 		var element: Sprite = spriteElement[charTurn.id]

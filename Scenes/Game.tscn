@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/WorldScenes/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://Resources/Battles/Bob.tres" type="Resource" id=8]
 [ext_resource path="res://Resources/Sprites/point1.png" type="Texture" id=9]
 [ext_resource path="res://Resources/Sprites/point2.png" type="Texture" id=10]
+[ext_resource path="res://Resources/Stuff/Consomables/first_aid_kit.tres" type="Resource" id=11]
+[ext_resource path="res://Resources/Stuff/Consomables/potion.tres" type="Resource" id=12]
+[ext_resource path="res://Resources/Stuff/Consomables/apple_juice.tres" type="Resource" id=13]
+[ext_resource path="res://Resources/Stuff/Consomables/mana_potion.tres" type="Resource" id=14]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 24, 24, 0, 24, 0, 0, 24, 0 )
@@ -56,6 +60,7 @@ extents = Vector2( 12, 12 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
+Inventory = [ ExtResource( 12 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 11 ) ]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 240, 160 )

@@ -1,7 +1,12 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Resources/Character.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Sprites/chars/seth.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Techniques/flamethower.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Techniques/fireball.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Techniques/shock.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Techniques/charge.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Techniques/taser.tres" type="Resource" id=7]
 
 [resource]
 script = ExtResource( 1 )
@@ -15,3 +20,4 @@ StatHP = 100
 StatMP = 100
 StatInit = 98
 Actions = [ 0, 1, 2, 3 ]
+Techniques = [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 7 ) ]
